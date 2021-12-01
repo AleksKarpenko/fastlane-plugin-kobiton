@@ -99,9 +99,9 @@ module Fastlane
             env_name: "FL_KOBITON_APP_ID",
             description: "The Kobiton app ID of the application",
             verify_block: proc do |value|
-              UI.user_error!("No app ID or value 0 for KobitonUpload given, pass using `app_id: <app_id>`") unless value && value != 0
+              UI.message("No app ID or value 0 for KobitonUpload given, pass using `app_id: <app_id>`") unless value && value != 0
             end,
-            optional: false,
+            optional: true,
             type: Integer
           )
         ]
